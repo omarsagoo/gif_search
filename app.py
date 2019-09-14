@@ -16,7 +16,7 @@ def index():
 
     params = {
         "key": "FBQJ8PNF0RXL",
-        "q": "funny",
+        "q": input_handler("what kind of gif? "),
         "limit": 10
     }
 
@@ -32,7 +32,7 @@ def index():
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
     for i in range(len(gif_json['results'])):
-        gif_list = gif_json['results'][i]['media'][0]['gif']['url']
+        gif_list = gif_json['results'] #[i]['media'][0]['gif']['url']
         print(gif_list)
 
     # TODO: Render the 'index.html' template, passing the list of gifs as a
