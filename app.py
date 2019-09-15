@@ -6,12 +6,13 @@ app = Flask(__name__)
 
 def input_handler(prompt):
     user_input = input(prompt)
-
     return user_input
 
 @app.route('/')
 def index():
-    """Return homepage."""
+    """Show the homepage and ask the user's name."""
+    return render_template('index.html')
+    
     # TODO: Extract the query term from url using request.args.get()
 
     params = {
@@ -38,7 +39,6 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    return render_template("index.html", gif_list = gif_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
