@@ -1,9 +1,11 @@
-
-<form action='/compliment'>
-  <center>Search
+{% extends 'base.html' %}
+{% block content %}
+<form action='/gif'>
+  <div class="center">
       <input type="text" name="name"></input>
-  <button type="submit">Submit</button></center>
+      <button type="submit">Submit</button>
+  </div>
 </form> 
-
+{% endblock %}
 
   
