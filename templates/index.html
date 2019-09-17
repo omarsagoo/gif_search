@@ -6,6 +6,14 @@
       <button type="submit">Submit</button>
   </div>
 </form> 
+
+<div>
+{% for gif in gifs %}
+<!-- {{gif}} -->
+{% include 'gif.html' %}
+{% endfor %}
+</div>
+
 {% endblock %}
 
   
