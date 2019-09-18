@@ -12,10 +12,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Show the homepage and ask the user's name."""
-    
-    
-    # Extract the query term from url using request.args.get()
-    
+
     user_search = request.args.get("search")
 
     params = {
@@ -24,26 +21,21 @@ def index():
         "limit": 10
     }
 
-    # TODO: Make an API call to Tenor using the 'requests' library. For 
-    # reference on how to use Tenor, see: 
-    # https://tenor.com/gifapi/documentation
     response = requests.get("https://api.tenor.com/v1/search", params)
 
-    # TODO: Use the '.json()' function to get the JSON of the returned response
-    # object
     gif_json = response.json()
 
-    # Using dictionary notation, get the 'results' field of the JSON,
-    # which contains the GIFs as a list
     if response.status_code == 200:
         gif_list = gif_json['results']
     else:
         gif_list = None
-   
-    # TODO: Render the 'index.html' template, passing the list of gifs as a
-    # named parameter called 'gifs'
-    return render_template('index.html', gifs=gif_list)
-
+    
+    # if statement that checks if there is any user input, if not then it wont display any gifs. 
+    # also doesnt display any gifs on startup
+    if user_search == None:
+        return render_template('index.html', gifs= list())
+    else:
+        return  render_template('index.html', gifs=gif_list)
 
 class appTest(unittest.TestCase):
 
