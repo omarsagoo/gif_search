@@ -12,19 +12,23 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Show the homepage and ask the user's name."""
-
+    # accepts user input from the html and passes it in to the query param
     user_search = request.args.get("search")
 
+    # stores params in a dict variable for the api respponse
     params = {
         "q": user_search,
         "key": "FBQJ8PNF0RXL",
         "limit": 10
     }
 
+    #retrieves the API response 
     response = requests.get("https://api.tenor.com/v1/search", params)
 
+    # stores the api response in json in a dict variable
     gif_json = response.json()
 
+    # displays gifs, if an error comes from the API then it doesnt display anything w/o crashing
     if response.status_code == 200:
         gif_list = gif_json['results']
     else:
