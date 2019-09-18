@@ -3,9 +3,11 @@
 <div class="gifs">
 <div class="inputfield">
   <form>
-      <input type="text" placeholder="Search GIFs" name="search" class="input">
-             
-  </form>
+      <input type="text" placeholder="Search GIFs" name="search" class="input"> >      
+      <input type="submit" name="trending" value="trending">
+      <input type="submit" name="random" value="random">
+
+    </form>
 </div>
 
   {% for gif in gifs %}
