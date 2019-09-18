@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-<form action='/gif'>
+<form action='/'>
   <div class="center">
-      <input type="text" name="name"></input>
-      <button type="submit">Submit</button>
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
   </div>
 </form> 
 
 <div>
 {% for gif in gifs %}
-<!-- {{gif}} -->
 {% include 'gif.html' %}
 {% endfor %}
 </div>
