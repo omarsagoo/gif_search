@@ -1,18 +1,16 @@
-{% extends 'base.html' %}
-{% block content %}
-<form action='/'>
-  <div class="center">
-    <input type="text" placeholder="Search.." name="search">
-    <button type="submit"><i class="fa fa-search"></i></button>
-  </div>
-</form> 
-
-<div>
-{% for gif in gifs %}
-{% include 'gif.html' %}
-{% endfor %}
+{% extends 'base.html' %}
+{% block content %}
+<div class="gifs">
+<div class="inputfield">
+  <form>
+      <input type="text" placeholder="Search GIFs" name="search" class="input">
+             
+  </form>
 </div>
 
-{% endblock %}
+  {% for gif in gifs %}
+  {% include 'gif.html' %}
+  {% endfor %}
+  {% endblock %}
 
-  
+</div>
