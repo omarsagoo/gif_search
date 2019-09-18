@@ -2,6 +2,11 @@ body{
   align-items: center;
   text-align: center;
   background-color: rgb(70, 69, 69);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .inputfield .input {
@@ -10,10 +15,14 @@ body{
   width: 800px;
   height: 50px; 
   margin: 0;
-  color: white;ç
+  color: white;
+  margin: 0;
+  
 }
 
 .tenor-gif-embed {
 display: inline-block;
 margin: 2%;
 }
+
+
