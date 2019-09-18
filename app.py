@@ -35,6 +35,7 @@ def index():
 
     # Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list
+    
     if response.status_code == 200:
         gif_list = gif_json['results']
     else:
