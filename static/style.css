@@ -1,17 +1,16 @@
 body{
   align-items: center;
   text-align: center;
+  background-color: rgb(70, 69, 69);
 }
 
 .inputfield .input {
   border-radius: 20px;
-  background: blue;
+  background: black;
   width: 800px;
   height: 50px; 
-  margin: 0;  
-  text-align: center;
-  background-image: url("https://media.istockphoto.com/videos/multicolored-motion-gradient-background-video-id914165508?s=640x640");
-  text-emphasis-color: white;
+  margin: 0;
+  color: white;ç
 }
 
 .tenor-gif-embed {
