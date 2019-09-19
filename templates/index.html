@@ -3,25 +3,21 @@
 <div class="container">
 <div class="inputfield">
   <form>
-<<<<<<< HEAD
-      <input type="text" placeholder="fml" name="search" class="input"> >      
-=======
       <input type="text" placeholder="Search GIFs" name="search" class="input">       
   </form>
   <form>
->>>>>>> 108e0cc29da959991c5778bdc2d53bf839c32ace
       <input type="submit" name="trending" value="trending">
   </form>
   <form>
       <input type="submit" name="random" value="random">
   </form>
 </div>
-{% if gifs|length > 0 %}
+
 <div class='gifs'>
   {% for gif in gifs %}
   {% include 'gif.html' %}
   {% endfor %}
   {% endblock %}
 </div>
-{% endif %}
+
 </div>
