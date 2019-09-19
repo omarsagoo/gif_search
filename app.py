@@ -98,15 +98,6 @@ def index():
 
     
 
-
-   
-
-    
-    
-    
-   
-    
-
 class appTest(unittest.TestCase):
 
     def setUp(self):
