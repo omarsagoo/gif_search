@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="gifs">
+<div class="container">
 <div class="inputfield">
   <form>
-      <input type="text" placeholder="Search GIFs" name="search" class="input"> >      
+      <input type="text" placeholder="fml" name="search" class="input"> >      
       <input type="submit" name="trending" value="trending">
       <input type="submit" name="random" value="random">
 
     </form>
 </div>
-
+{% if gifs|length > 0 %}
+<div class='gifs'>
   {% for gif in gifs %}
   {% include 'gif.html' %}
   {% endfor %}
   {% endblock %}
-
+</div>
+{% endif %}
 </div>
