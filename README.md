@@ -14,15 +14,14 @@ gif_search
 ```
 
 ## Authors
-[Omar Sagoo](https://github.com/omarsagoo)
+[Omar Sagoo](https://github.com/omarsagoo) Github
 
-[Luke Parker](https://github.com/)
+[Luke Parker](https://github.com/) Github
 
 ## Required Modules
 Modules required to run this application: Request and Flask
 ```
 ~$ pip3 install requests flask
-
 ```
 
 
