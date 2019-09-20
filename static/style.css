@@ -4,6 +4,7 @@
   background-image: url("https://thumbs.gfycat.com/PlaintiveSingleBooby-size_restricted.gif");
   background-size: cover;
   padding: 5px;
+  text-align: center;
 } 
 
 .input{
@@ -40,5 +41,8 @@ border-radius: 5px;
   display: flex;
 }
 
-
+.err-msg {
+  font-size: 1000%;
+  color: #8e8e8e;
+}
 

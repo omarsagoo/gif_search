@@ -67,8 +67,6 @@ def search_gif(user_search):
      # stores the api response in json in a dict variable
     gif_json = response.json()
 
-    if gif_json['results'] == []:
-        print('sorry no results!')
     
     #Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list, 
@@ -77,7 +75,7 @@ def search_gif(user_search):
         gif_list = gif_json['results']
     else:
         gif_list = None
-    print(gif_json['results'])
+
     return  render_template('index.html', gifs=gif_list)
 
 
