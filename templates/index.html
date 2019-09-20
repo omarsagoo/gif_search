@@ -1,19 +1,27 @@
+<!-- inherits base.html -->
 {% extends 'base.html' %}
 {% block content %}
+
+<!-- Creates divs with forms containing the input fields for the search button, random button, and the trending button.  -->
+
 <div class="inputfield" style="padding-left: 20%;">
   <form class="search">
       <input type="text" placeholder="Search GIFs" name="search" class="input"> 
       <input type="submit" class="button" value="Search"/>
   </form>
 </div>
-<!-- <form style="padding-left: 35%;">     -->
+
 <form>      
       <input class="button" type="submit" name="trending" value="Trending">
   </form>
-  <!-- <form style="padding-left: 34.72%;"> -->
+  
   <form>      
           <input class="button" type="submit" name="random" value="Random">
   </form>
+
+  <!-- jinja if statements and for loops to load the gifs into the webpage.
+  also contains error handling incase of improper user input.  -->
+
   {% if gifs %}
   
   {% for gif in gifs %}
