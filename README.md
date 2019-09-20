@@ -1,27 +1,43 @@
 # Gif-Search
 Implementing the use of Flask, Requests and Jinja learned in class to create a local running website that uses the Tenor API
 
-### Authors
+## Structure
+```
+gif_search
+| - static: Style Sheets
+    | - style.css
+| - templates: HTML files for Framework
+    | - base.html
+    | - gif.html
+    | - index.html
+| - app.py: Flask Framework
+```
+
+## Authors
 [Omar Sagoo](https://github.com/omarsagoo)
+
 [Luke Parker](https://github.com/)
 
+## Required Modules
+Modules required to run this application: Request and Flask
+```
+~$ pip3 install requests flask
 
-### How to Run Flask
-To run, open the folder containing `app.py` in a Terminal instance, and run:
-
-```bash
-export FLASK_ENV=development
-flask run
 ```
 
 
+## How to Run Flask
+To run, open the folder containing `app.py` in a Terminal instance, and run:
 
-### Rubric
+```
+~$ export FLASK_ENV=development
+~$ flask run
+```
+
+## Rubric
 [Project rubirc here](https://docs.google.com/document/d/1u8zn_w9kQceK1y0f0F6QEWWgP8T7KRsQvQOIvlzyMi0/edit)
 
-
-
-### Resources
+## Resources
 
 You may find the following resources helpful in your development process:
 
