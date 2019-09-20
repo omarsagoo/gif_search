@@ -1,25 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="gifs">
-<div class="inputfield">
-  <form>
-<<<<<<< HEAD
-      <input type="text" placeholder="Search GIFs" name="search" class="input">       
-  </form>
-  <form>
-=======
-      <input type="text" placeholder="Search GIFs" name="search" class="input"> >      
->>>>>>> parent of 8fceb04... updated ui
-      <input type="submit" name="trending" value="trending">
-  </form>
-  <form>
-      <input type="submit" name="random" value="random">
+<div class="inputfield" style="padding-left: 20%;">
+  <form class="search">
+      <input type="text" placeholder="Search GIFs" name="search" class="input"> 
+      <input type="submit" class="button" value="Search"/>
   </form>
 </div>
-
+<!-- <form style="padding-left: 35%;">     -->
+<form>      
+      <input class="button" type="submit" name="trending" value="Trending">
+  </form>
+  <!-- <form style="padding-left: 34.72%;"> -->
+  <form>      
+          <input class="button" type="submit" name="random" value="Random">
+  </form>
+  {% if gifs %}
+  
   {% for gif in gifs %}
   {% include 'gif.html' %}
   {% endfor %}
+
+  {% else %}
+  <p>Sorry! No Gifs to Display!!</p>
+  {% endif %}
+
   {% endblock %}
 
-</div>
