@@ -67,6 +67,8 @@ def search_gif(user_search):
      # stores the api response in json in a dict variable
     gif_json = response.json()
 
+    if gif_json['results'] == []:
+        print('sorry no results!')
     
     #Using dictionary notation, get the 'results' field of the JSON,
     # which contains the GIFs as a list, 
@@ -75,7 +77,7 @@ def search_gif(user_search):
         gif_list = gif_json['results']
     else:
         gif_list = None
-    
+    print(gif_json['results'])
     return  render_template('index.html', gifs=gif_list)
 
 
@@ -87,14 +89,14 @@ def index():
 
     # if statement that checks if there is any user input, trending, or random gifs. if not then it wont display any gifs. 
     # also doesnt display any gifs on startup
-    if request.args.get("trending") == "trending":
+    if request.args.get("trending") == "Trending":
         return trending_gifs()
-    elif request.args.get("random") == "random":
+    elif request.args.get("random") == "Random":
         return random_gif()
     elif request.args.get("search") != None: 
-        return search_gif(user_search)
+        return search_gif(user_search) 
     else:
-        return  render_template('index.html', gifs=list())
+        return random_gif()
 
     
 
