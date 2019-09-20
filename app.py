@@ -45,7 +45,7 @@ def random_gif():
     """ stores the api response in json in a dict variable """
     gif_json = response.json()
 
-     """ Using dictionary notation, get the 'results' field of the JSON,
+    """ Using dictionary notation, get the 'results' field of the JSON,
      which contains the GIFs as a list, 
      If statement checks to make sure that if the server doesnt have anything to return, it returns a null gif list """
     if response.status_code == 200:
@@ -63,13 +63,13 @@ def search_gif(user_search):
     "limit": 9
     }
 
-     """ retrieves the API response """
+    """ retrieves the API response """
     response = requests.get("https://api.tenor.com/v1/search", params)
-     """ stores the api response in json in a dict variable """
+    """ stores the api response in json in a dict variable """
     gif_json = response.json()
 
     
-     """ Using dictionary notation, get the 'results' field of the JSON,
+    """ Using dictionary notation, get the 'results' field of the JSON,
      which contains the GIFs as a list, 
      If statement checks to make sure that if the server doesnt have anything to return, it returns a null gif list """
     if response.status_code == 200:
