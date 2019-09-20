@@ -1,6 +1,11 @@
 # Gif-Search
 Implementing the use of Flask, Requests and Jinja learned in class to create a local running website that uses the Tenor API
 
+## How to run
+clone this repo and $ Flask run
+            or
+visit: http://gif-search-project.herokuapp.com/
+
 ## Structure
 ```
 gif_search
