@@ -5,7 +5,12 @@ import requests
 from flask import Flask, render_template, request
 
 import app
+import os
+from dotenv import load_dotenv
+ 
+load_dotenv()
 
+TENOR_API_KEY = os.getenv("TENOR_API_KEY")
 
 app = Flask(__name__)
 
@@ -13,7 +18,7 @@ app = Flask(__name__)
 def trending_gifs():
     """ stores params in a dict variable for the api respponse """
     params = {
-    "key": "FBQJ8PNF0RXL",
+    "key": TENOR_API_KEY,
     "limit": 9
     }
 
@@ -35,7 +40,7 @@ def trending_gifs():
 def random_gif():
     """ stores params in a dict variable for the api respponse """
     params = {
-        "key":"FBQJ8PNF0RXL",
+        "key":TENOR_API_KEY,
         "q": "random",
         "limit": 9
     }
@@ -59,7 +64,7 @@ def search_gif(user_search):
     """ stores params in a dict variable for the api respponse """
     params = {
     "q": user_search,
-    "key": "FBQJ8PNF0RXL",
+    "key": TENOR_API_KEY,
     "limit": 9
     }
 
@@ -67,13 +72,14 @@ def search_gif(user_search):
     response = requests.get("https://api.tenor.com/v1/search", params)
     """ stores the api response in json in a dict variable """
     gif_json = response.json()
-
+    
     
     """ Using dictionary notation, get the 'results' field of the JSON,
      which contains the GIFs as a list, 
      If statement checks to make sure that if the server doesnt have anything to return, it returns a null gif list """
     if response.status_code == 200:
         gif_list = gif_json['results']
+        print(gif_list)
     else:
         gif_list = None
 
