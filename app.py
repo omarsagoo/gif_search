@@ -68,10 +68,13 @@ def search_gif(user_search):
     "limit": 9
     }
 
-    """ retrieves the API response """
-    response = requests.get("https://api.tenor.com/v1/search", params)
-    """ stores the api response in json in a dict variable """
-    gif_json = response.json()
+    if params["q"].isspace() != True:
+        """ retrieves the API response """
+        response = requests.get("https://api.tenor.com/v1/search", params)
+        """ stores the api response in json in a dict variable """
+        gif_json = response.json()
+    else: 
+        return random_gif()
     
     
     """ Using dictionary notation, get the 'results' field of the JSON,
