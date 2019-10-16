@@ -79,7 +79,6 @@ def search_gif(user_search):
      If statement checks to make sure that if the server doesnt have anything to return, it returns a null gif list """
     if response.status_code == 200:
         gif_list = gif_json['results']
-        print(gif_list)
     else:
         gif_list = None
 

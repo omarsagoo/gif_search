@@ -33,10 +33,11 @@ border: rgba(255,255,255,.50) solid 1px;
 text-align: center;
 font-size: 20;
 margin: 5px;
-background-color: rgba(0, 0, 0, .1);
+background-color: rgba(0, 0, 0, 0);
 font-size: 20px;
 color: #8e8e8e;
 border-radius: 5px;
+cursor: pointer;
 }
 
 /* contains the styling for the search bar */
