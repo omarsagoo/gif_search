@@ -13,7 +13,6 @@ RUN pip install -r requirements.txt
 # Declare env variables
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=development
-ENV TENOR_API_KEY=FBQJ8PNF0RXL
 
 # Expose the port that flask will run on
 EXPOSE 5000
